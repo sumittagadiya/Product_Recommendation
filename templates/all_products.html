@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Product List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h3>All Products</h3> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    {% for post in posts %}
+    <div class="col-md-3">
+    <a href="product_info/{{post['id']}}">  <img src="{{ post['medium_image_url'] }}" height="100"></a> 
+    <a href="product_info/{{post['id']}}"></a> <h5 style="min-height: 60px;">{{ post['title'] }}</h5></a>
+      <p><b>Price:- $ {{ post['formatted_price'] }} </b></p>
+      <p><b>Brand:-  {{ post['brand'] }} </b></p>
+      <p><b>Color:- {{ post['color'] }} </b></p>
+      <p><b>Product Type:-  {{ post['product_type_name'] }} </b></p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+</body>
+</html>
