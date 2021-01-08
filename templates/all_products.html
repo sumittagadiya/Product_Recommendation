@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <title>Product List</title>
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -9,11 +12,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <div class="jumbotron text-center">
   <h3>All Products</h3> 
+  <div class="container"> 
+    <a href="/"><button class="btn btn-success pull-left"><i class="fa fa-home"></i>Home</button></a>
+  </div> 
 </div>
-  
+
 <div class="container">
   <div class="row">
     {% for post in posts %}
