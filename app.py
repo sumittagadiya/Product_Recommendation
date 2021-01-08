@@ -41,5 +41,5 @@ def get_selected_product(pid):
     return render_template('product_details.html', posts=post,prosim=similar_post)
 
 if __name__ == "__main__":
-    app.run(host='localhost',port=8080,debug=True)
+    app.run(host='0.0.0.0',port=8080,debug=True)
 
