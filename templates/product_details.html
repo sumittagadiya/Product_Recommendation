@@ -36,8 +36,8 @@
       <h3>Similar Products</h3>
     {% for post2 in prosim %}
     <div class="col-md-3">
-    <a href="product_info/{{post2['id']}}">  <img src="{{ post2['medium_image_url'] }}" height="100"></a> 
-    <a href="product_info/{{post2['id']}}"></a> <h5 style="min-height: 60px;">{{ post2['title'] }}</h5></a>
+    <a href="{{post2['id']}}">  <img src="{{ post2['medium_image_url'] }}" height="100"></a> 
+    <a href="{{post2['id']}}"></a> <h5 style="min-height: 60px;">{{ post2['title'] }}</h5></a>
       <p><b>Price:- $ {{ post2['formatted_price'] }} </b></p>
       <p><b>Brand:-  {{ post2['brand'] }} </b></p>
       <p><b>Color:- {{ post2['color'] }} </b></p>
