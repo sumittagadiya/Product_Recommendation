@@ -97,7 +97,7 @@ def find_similarity(title,top_n):
     # get top similarity indices  in descending order
     similarity_index = np.array(list(reversed(sort)))
     # finad top n similarities
-    top_similarity_index = similarity_index[:top_n]
+    top_similarity_index = similarity_index[1:top_n+1]
     # print top similarity values
     # print('Top cosine similarities are ======>',similarities[0][top_similarity_index])
     # get original title of similar questions
@@ -105,5 +105,5 @@ def find_similarity(title,top_n):
     #print(similar_questions)
     
     total_time = (time.time() - start)
-    print('Total time ===========> ',total_time)
+    #print('Total time ===========> ',total_time)
     return list(top_similarity_index+1)
